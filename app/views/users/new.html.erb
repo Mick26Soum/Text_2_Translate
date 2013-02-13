@@ -1,0 +1,19 @@
+<h1>Sign up to Text 2 Translate</h1>
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <p><%= f.label :first_name %><br>
+  <%= f.text_field :first_name%></p>
+
+  <p><%= f.label :phone %><br>
+  <%= f.text_field :phone%></p>
+
+  <%= f.submit %>
+<% end %>
